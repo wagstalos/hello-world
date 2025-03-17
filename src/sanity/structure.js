@@ -4,11 +4,10 @@ export const structure = (S) =>
     .title("Gerenciador de Conteúdo")
     .items([
       S.documentTypeListItem("project").title("Projetos"),
-      S.documentTypeListItem("categoria").title("Categorias"),
 
       S.divider(),
       ...S.documentTypeListItems().filter(
         (item) =>
-          item.getId() && !["project", "categoria"].includes(item.getId())
+          item.getId() && !["project"].includes(item.getId())
       ),
     ]);
